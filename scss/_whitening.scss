@@ -1,0 +1,102 @@
+.section-whitening {
+    min-height:1300px;
+    background-image:url(../img/whitening/whitening_background.png);
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #0a143c;
+
+    &__content {
+        display: flex;
+        color: #0a143c;
+        &--text {
+            animation: moveInLeft 1s ease-out;
+            max-width: 722px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-left: 13px;
+            margin-top: 182px;
+            line-height: 30px;
+            font-weight: 300;
+            z-index: 10;
+            img {
+                &:first-of-type {
+                    position: absolute;
+                    top: 45px;
+                    left: -81px;
+                }
+                &:last-of-type {
+                    position: absolute;
+                    bottom: 103px;
+                    right: -75px;
+                }
+            }
+            h1 {
+                margin-top: 115px;
+                font-weight: 900;
+                font-size: 60px;
+                line-height: 65px;
+            }
+            p {
+                font-size: 20px;
+                &:first-of-type {
+                    margin-top: 79px;
+                    span {
+                        font-weight: 900;
+                    }
+                }
+                &:not(:first-of-type) {
+                    margin-top: 30px;
+                }
+            }
+            
+            .info {
+                display: flex;
+                justify-content: space-between;
+                margin-top: -26px;
+                &--time {
+                    p:first-child {
+                    color: #01b3ff;
+                    font-size: 82px;
+                    font-weight: 900;
+                    line-height: 70px;
+                    }
+                    p:last-child {
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    letter-spacing: 4.7px;
+                    margin-top: -3px;
+                    font-size: 20px;
+                    }
+                }
+                &--price {
+                    text-transform: uppercase;
+                    padding-left: 30px;
+                    p:first-child {
+                        font-size: 20px;
+                        font-weight: 600;
+                        letter-spacing: 4.8px;
+                    }
+                    p:last-child {
+                        padding-right: 112px;
+                        font-size: 60px;
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+        &--img {
+            animation: shake 1s ease-out;
+            margin-top: 244px;
+            position: relative;
+            img {
+                margin-right: 20px;
+                position: absolute;
+                top: 2px;
+                left: -77px;
+                z-index: 4;
+            }
+        }
+    }
+}

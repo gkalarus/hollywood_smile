@@ -1,0 +1,47 @@
+.footer {
+    background-image:url(../img/about/footer_background.png);
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 250px;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 95px;
+        &--logo {
+            
+        }
+        &--menu {
+            a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 16px;
+                font-weight: 800;
+                text-transform: uppercase;
+                &:not(:last-child) {
+                    padding-right: 43px;
+                }
+            }
+            a:hover {
+                color: #929292;
+            }
+        }
+    }
+}
+
+@include respond (phone) {
+
+	.footer {
+		&__content {
+            flex-direction: column;
+            align-items: center;
+            &--menu {
+                display: flex;
+                flex-direction: column;
+                a {
+                    padding-top: 5px;
+                }
+            }
+        }
+	}
+}
