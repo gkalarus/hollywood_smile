@@ -35,7 +35,9 @@ $(document).ready(function() {
     $('#moveDown-2').click(function() {
         $.scrollify.next()
     })
-        
+    
+    
+    
   
 
 })

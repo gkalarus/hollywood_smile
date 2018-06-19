@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gabinet stomatologiczny - Hollywood Smile</title>
+    <meta name="description" content="">
+    
+    <meta property="og:title" content="Hollywood Smile">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="">
+    <meta property="og:url" content="/">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <title>Kontakt - Hollywood Smile</title>
     
     <link rel='stylesheet' href='css\main.css' type='text/css' media='all'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
@@ -25,19 +33,19 @@
                     <li class="menu__item"><a href="index.html" class="menu__link">strona główna</a></li>
                     <li class="menu__item"><a href="about.html" class="menu__link">o nas</a></li>
                     <li class="menu__item"><a href="whitening.html" class="menu__link">wybielanie zębów</a></li>
-                    <li class="menu__item menu__item--current"><a class="menu__link">kontakt</a></li>
+                    <li class="menu__item menu__item--current"><a href="contact.html" class="menu__link">kontakt</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-         
     <section class="section-contact">
         <div class="section-contact__content container">
-            <div class="section-whitening__content--text">
-                <img class="bottom-right" src="./img/main/top-left.png" alt="">
-                <h1>hollywood smile</h1>
-                <div class="contactData">
+            <div class="section-contact__content--text">
+                <img class="top-left" src="./img/main/top-left.png" alt="">
+                <h1>Kontakt</h1>
+                <h2>hollywood smile</h2>
+                <div class="contact">
                     <div>
                         <img src="./img/main/location.png" alt="">
                         <p>
@@ -59,8 +67,20 @@
                     </div>
                 </div>
             </div>
+            <div class="section-contact__content--form">
+                <h2>Formularz kontaktowy</h2>
+                <form id="usrform" action="#">
+                        <input type="text" id="fullname" name="firstname" placeholder="Imię i nazwisko">
+                        <input type="text" id="phone" name="phone" placeholder="Telefon">
+                        <input type="email" id="email" name="email" placeholder="E-mail">
+                        <textarea name="comment" form="usrform" placeholder="Wiadomość"></textarea>
+                        <input type="submit" value="wyślij">
+                </form>
+            </div>
+  
         </div>
     </section>
+    <div id="map"></div>
 
     <footer class="footer">
         <div class="footer__content container">
@@ -71,7 +91,7 @@
                 <a href="index.html">strona główna</a>
                 <a href="about.html">o nas</a>
                 <a href="whitening.html">wybielanie zębów</a>
-                <a href="#">kontakt</a>
+                <a href="contact.html">kontakt</a>
             </div>
         </div>
     </footer>
@@ -80,5 +100,9 @@
     <script src="js/jquery.scrollify.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <!-- <script src="js/map.js"></script> -->
+    
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs6V6lH6iStXJvUm-McDX5XPHz9xuw44s8&callback=initMap"
+    type="text/javascript"></script> -->
 </body>
 </html>
