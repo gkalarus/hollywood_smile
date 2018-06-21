@@ -4,6 +4,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     height: 250px;
+    position: relative;
     &__content {
         display: flex;
         justify-content: space-between;
@@ -12,7 +13,7 @@
         &--menu {
             a {
                 text-decoration: none;
-                color: #fff;
+                color: $color-white;
                 font-size: 16px;
                 font-weight: 800;
                 text-transform: uppercase;
@@ -21,8 +22,44 @@
                 }
             }
             a:hover {
-                color: #929292;
+                color: $color-grey;
             }
+        }
+    }
+    &__social {
+        position: absolute;
+        top: 82px;
+        right: 49px;
+        color: $color-white;
+
+        &--fb {
+            font-size: 25px;
+            padding-left: 7px;
+            a {
+                i {
+                    color: $color-white;
+                }
+            }
+        }
+
+        &--in{
+            margin-top: 32px;
+            margin-right: 10px;
+            font-size: 30px;
+            a {
+                i {
+                    color: $color-white;
+                }
+            }
+        }
+
+    }
+}
+
+@include respond (tab-land) {
+    .footer {
+        &__social {
+            display: none;
         }
     }
 }

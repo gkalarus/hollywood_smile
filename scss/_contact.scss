@@ -4,13 +4,13 @@
     background-size: cover; 
     background-position: center center;
     background-repeat: no-repeat;
-    color: #0a143c;
+    color: $color-dark;
     &__content {
         display: flex;
         justify-content: space-between;
         &--text {
             animation: moveInLeft 1s ease-out;
-            color: #0a143c;
+            color: $color-dark;
             max-width: 800px;
             margin-top: 300px;
             margin-left: -64px;
@@ -66,7 +66,19 @@
                             margin-left: 29px;
                             margin-top: 3px;
                             a {
-                                color: #01b3ff;
+                                color: $color-blue;
+                                text-decoration: none;
+                                &::after {
+                                    content: '';
+                                    display: block;
+                                    width: 0;
+                                    height: 2px;
+                                    background: $color-blue;
+                                    transition: width .3s;
+                                }
+                                &:hover::after {
+                                    width: 100%;
+                                }
                             }
                         }
                     }
@@ -106,17 +118,17 @@
                 textarea {
                     height: 143px;
                     box-sizing: border-box;
-                    background-color: #fff;
+                    background-color: $color-white;
                     resize: none;
                     margin: 5px 0;
                 }
 
                 input[type=text], input[type=email], textarea {
                     width: 641px;
-                    border: 1px solid #0a143c;
+                    border: 1px solid $color-dark;
                     padding: 16px 25px;
                     &::placeholder {
-                        color: #0a143c;
+                        color: $color-dark;
                         font-family: 'Montserrat', sans-serif;
                         font-family: Montserrat;
                         font-size: 14px;
@@ -126,14 +138,14 @@
 
                 input[type=submit] {
                     border: none;
-                    color: white;
+                    color: $color-white;
                     text-decoration: none;
                     margin: 22px 2px;
                     cursor: pointer;
 
                     width: 130px;
                     height: 50px;
-                    background-color: #01b3ff;
+                    background-color: $color-blue;
                     font-size: 18px;
                     font-weight: 900;
                 }
@@ -149,7 +161,7 @@
     background-size: cover; 
     background-position: center center;
     background-repeat: no-repeat;
-    color: #0a143c;
+    color: $color-dark;
 }
 
 @include respond (tab-land) {

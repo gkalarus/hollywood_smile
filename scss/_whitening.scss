@@ -4,11 +4,11 @@
     background-size: cover; 
     background-position: center center;
     background-repeat: no-repeat;
-    color: #0a143c;
+    color: $color-dark;
 
     &__content {
         display: flex;
-        color: #0a143c;
+        color: $color-dark;
         &--text {
             animation: moveInLeft 1s ease-out;
             max-width: 722px;
@@ -57,7 +57,7 @@
                 margin-top: -26px;
                 &--time {
                     p:first-child {
-                    color: #01b3ff;
+                    color: $color-blue;
                     font-size: 82px;
                     font-weight: 900;
                     line-height: 70px;

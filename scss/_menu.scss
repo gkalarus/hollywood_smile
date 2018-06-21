@@ -36,7 +36,7 @@
 	padding: 0;
     list-style: none;
     text-transform: uppercase;
-    color: #0a143c;
+    color: $color-dark;
     font-size: 16px;
     font-weight: 400;
 	text-transform: uppercase;
@@ -49,7 +49,7 @@
 }
 
 .menu__link {
-	color: #0a143c;
+	color: $color-dark;
 	text-decoration: none;
 	font-size: 1.05em;
 	font-weight: bold;
@@ -95,7 +95,7 @@
 	width: 16px;
 	height: 16px;
 	opacity: 0;
-	border: 2px solid #01b3ff;
+	border: 2px solid $color-blue;
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
 	transition: transform 0.3s, opacity 0.3s;
 	-webkit-transition-timing-function: cubic-bezier(0.17, 0.67, 0.05, 1.29);

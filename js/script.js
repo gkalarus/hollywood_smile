@@ -4,8 +4,11 @@ $(document).ready(function() {
     var $navBarItem = $navBar.find('.nav__item');
     var $navItemTitle = $navBar.find('.nav__item-title');
     var $languages = $('.languages').find('a');
+    var $plBtn = $languages.eq(0);
+    var $enBtn = $languages.eq(1);
     var $social = $('.social').find('a');
     
+    console.log($plBtn);
 
     $.scrollify({
         section: ".section",
@@ -74,5 +77,19 @@ $(document).ready(function() {
             $.scrollify.move('#4');
         }
     })
+
+    $plBtn.on('click', function(e) {
+        e.preventDefault();
+        $enBtn.parent().removeClass('border');
+        $plBtn.parent().addClass('border');
+    })
+
+    $enBtn.on('click', function(e) {
+        e.preventDefault();
+        $plBtn.parent().removeClass('border');
+        $enBtn.parent().addClass('border');
+    })
+
     
+     
 })

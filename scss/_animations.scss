@@ -58,7 +58,50 @@
     40%, 60% {
       transform: translate3d(4px, 0, 0);
     }
-  }
+}
+
+@keyframes pulse-grow {
+	to {
+		transform: scale(1.1);
+	}
+}
+
+@keyframes wobble-horizontal {
+	16.65% {
+		transform: translateX(8px);
+	}
+
+	33.3% {
+		transform: translateX(-6px);
+	}
+
+	49.95% {
+		transform: translateX(4px);
+	}
+
+	66.6% {
+		transform: translateX(-2px);
+	}
+
+	83.25% {
+		transform: translateX(1px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes pop {
+	50% {
+		transform: scale(1.2);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
 
 .leftAnimation {
     animation: moveInLeft 1s ease-out;
@@ -70,4 +113,49 @@
 
 .shakeAnimation {
     animation: shake 1s ease-out;
+}
+
+.pulse-grow {
+                
+    @include hideTapHighlightColor();
+    @include hardwareAccel();
+    @include improveAntiAlias();
+
+    &:hover {
+        animation-name: pulse-grow;
+        animation-duration: .3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+}
+
+.wobble-horizontal {
+	display: inline-block;
+
+	@include hideTapHighlightColor();
+	@include hardwareAccel();
+	@include improveAntiAlias();
+
+	&:hover {
+		animation-name: wobble-horizontal;
+		animation-duration: 1s;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: 1;
+	}
+}
+
+.pop {
+	display: inline-block;
+
+	@include hideTapHighlightColor();
+	@include hardwareAccel();
+	@include improveAntiAlias();
+
+	&:hover {
+		animation-name: pop;
+		animation-duration: .3s;
+		animation-timing-function: linear;
+		animation-iteration-count: 1;
+	}
 }

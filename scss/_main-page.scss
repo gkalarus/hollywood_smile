@@ -1,10 +1,11 @@
+
 .section-1 {
     background: url(../img/main/background_1.png) no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     &__content {
         display: flex;
-        color: #0a143c;
+        color: $color-dark;
         &--text {
             animation: moveInLeft 1s ease-out;
             max-width: 800px;
@@ -36,8 +37,8 @@
                 margin-top: 36px;
                 width: 160px;
                 height: 60px;
-                background-color: #01b3ff;
-                color: #ffffff;
+                background-color: $color-blue;
+                color: $color-white;
                 border: none;
                 font-size: 24px;
                 font-weight: 900;
@@ -52,7 +53,7 @@
                 margin-top: 52px;
                 &--time {
                     p:first-child {
-                    color: #01b3ff;
+                    color: $color-blue;
                     font-size: 82px;
                     font-weight: 900;
                     line-height: 70px;
@@ -94,7 +95,7 @@
     background: url(../img/main/background_2.png) no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
-    color: #fff;
+    color: $color-white;
     &__content {
         display: flex;
         &--text {
@@ -113,9 +114,6 @@
                 line-height: 35px;
                 font-size: 30px;
                 font-weight: 900;
-                // &.leftAnimation {
-                //     animation: moveInLeft 5s ease-out .75s;
-                // }
             }
             h2 {
                 margin-top: 32px;
@@ -133,7 +131,7 @@
                     font-weight: 300;
                     text-transform: uppercase;
                     span {
-                        color: #01b3ff;
+                        color: $color-blue;
                         font-size: 94px;
                         font-weight: 600;
                         margin-right: 22px;
@@ -148,11 +146,11 @@
 
             button {
                 padding-left: 10px;
-                color: #fff;
+                color: $color-white;
                 margin-top: 63px;
                 width: 359px;
                 height: 60px;
-                background-color: #01b3ff;
+                background-color: $color-blue;
                 border: none;
                 font-size: 24px;
                 font-weight: 900;
@@ -177,7 +175,7 @@
     height: 100vh;
     &__content {
         display: flex;
-        color: #0a143c;
+        color: $color-dark;
         &--text {
             display: flex;
             flex-direction: column;
@@ -214,7 +212,7 @@
                     line-height: 30px;
                     font-weight: 400;
                     span {
-                        color: #01b3ff;
+                        color: $color-blue;
                         font-weight: 600;
                     }
                 }
@@ -261,7 +259,7 @@
             max-width: 800px;
             margin-top: 302px;
             margin-left: -2px;
-            color: #fff;
+            color: $color-white;
             position: relative;
             .bottom-right {
                 position: absolute;
@@ -305,7 +303,19 @@
                             margin-left: 29px;
                             margin-top: 3px;
                             a {
-                                color: #01b3ff;
+                                color: $color-blue;
+                                text-decoration: none;
+                                &::after {
+                                    content: '';
+                                    display: block;
+                                    width: 0;
+                                    height: 2px;
+                                    background: $color-blue;
+                                    transition: width .3s;
+                                }
+                                &:hover::after {
+                                    width: 100%;
+                                }
                             }
                         }
                     }
@@ -316,12 +326,12 @@
             button {
                 font-family: 'Montserrat', sans-serif;
                 padding-left: 8px;
-                color: #fff;
+                color: $color-white;
                 margin-left: 73px;
                 margin-top: 57px;
                 width: 287px;
                 height: 60px;
-                background-color: #01b3ff;
+                background-color: $color-blue;
                 border: none;
                 font-size: 24px;
                 font-weight: 900;
@@ -331,7 +341,7 @@
                 cursor: pointer;
                 a {
                     text-decoration: none;
-                    color: #fff;
+                    color: $color-white;
                 }
             }
         }
